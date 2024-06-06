@@ -9,6 +9,7 @@ class HadithApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      showSemanticsDebugger: false,
       initialBinding: StatHolderBinder(),
       theme: ThemeData(
         scaffoldBackgroundColor: const Color.fromARGB(255, 17, 140, 111),
