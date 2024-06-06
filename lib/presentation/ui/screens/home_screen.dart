@@ -68,7 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Get.to(
                             () => ChapterScreen(
                                   title: item[index].title,
-                                  subTitle: item[index].title,
+                                  subTitle: item[index].numberOfHadis.toString(),
                                 ),
                             transition: Transition.rightToLeft);
                       },
@@ -87,11 +87,27 @@ class _HomeScreenState extends State<HomeScreen> {
                         item![index].title,
                         style: const TextStyle(fontFamily: 'Kalpurush'),
                       ),
-                      subtitle: const Text(
+                      subtitle:  Text(
                         'ইমাম বুখারী',
-                        style: TextStyle(fontFamily: 'Kalpurush'),
+                        style: TextStyle(fontFamily: 'Kalpurush',color: Colors.grey.shade600),
                       ),
-                      trailing: Text(item[index].numberOfHadis.toString()),
+                      trailing: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            item[index].numberOfHadis.toString(),
+                            style: const TextStyle(
+                                fontFamily: "Kalpurush-Ansi",
+                                fontWeight: FontWeight.w600),
+                          ),
+                          Text(
+                            'হাদিস',
+                            style: TextStyle(
+                                fontFamily: 'Kalpurush',
+                                color: Colors.grey.shade600),
+                          )
+                        ],
+                      ),
                     ),
                   );
                 });

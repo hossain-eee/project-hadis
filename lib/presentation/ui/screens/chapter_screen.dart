@@ -36,11 +36,11 @@ class ChapterScreen extends StatelessWidget {
                   ),
             ),
             Text(
-              subTitle,
+              '$subTitle টি হাদিস',
               style: Theme.of(context)
                   .textTheme
                   .bodyMedium!
-                  .copyWith(fontFamily: 'Kalpurush', color: Colors.white),
+                  .copyWith(fontFamily: 'Kalpurush-Ansi', color: Colors.white),
             )
           ],
         ),
@@ -80,7 +80,7 @@ class ChapterScreen extends StatelessWidget {
                           text: item![index].number.toString(),
                           angle: math.pi /
                               6, // Rotate the hexagon by 30 degrees (pi/6 radians)
-                              fntFamily :"Kalpurush",
+                              fntFamily :"Kalpurush-Ansi",
                         ),
                       ),
                       title: Text(
